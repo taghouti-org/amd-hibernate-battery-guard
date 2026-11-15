@@ -1,0 +1,6 @@
+[Unit]
+Description=Power off when battery is critically low (battery-guard)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/battery-guard.sh
