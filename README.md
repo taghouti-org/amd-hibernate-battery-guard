@@ -40,7 +40,7 @@ journalctl --since -30d -o short-iso | grep -E "Image saving done|returned from 
 ## Install
 
 ```sh
-git clone https://gist.github.com/<this-gist-id>.git hibernate-fix && cd hibernate-fix
+git clone https://gist.github.com/e13d840343614c2e285331490783a2a4.git hibernate-fix && cd hibernate-fix
 sudo ./install.sh                      # fix + safety nets
 sudo ./install.sh --charge-limit 80    # same, plus 75–80% charge limit
 sudo ./install.sh --uninstall          # remove everything
