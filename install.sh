@@ -1,8 +1,8 @@
 #!/bin/sh
 # Installer for the hibernate / battery-drain fixes.
-#   sudo ./install.sh                     install hibernate-mode, battery-guard, resume check
-#   sudo ./install.sh --charge-limit 80   also cap charging at 80% (resume below 75%)
-#   sudo ./install.sh --uninstall         remove everything this script installed
+#   sudo sh install.sh                     install hibernate-mode, battery-guard, resume check
+#   sudo sh install.sh --charge-limit 80   also cap charging at 80% (resume below 75%)
+#   sudo sh install.sh --uninstall         remove everything this script installed
 set -e
 [ "$(id -u)" -eq 0 ] || { echo "Run with sudo." >&2; exit 1; }
 cd "$(dirname "$0")"
