@@ -40,7 +40,7 @@ journalctl --since -30d -o short-iso | grep -E "Image saving done|returned from 
 ## Install
 
 ```sh
-git clone https://gist.github.com/e13d840343614c2e285331490783a2a4.git hibernate-fix && cd hibernate-fix
+git clone https://github.com/taghouti-org/amd-hibernate-battery-guard.git hibernate-fix && cd hibernate-fix
 sudo sh install.sh                      # fix + safety nets
 sudo sh install.sh --charge-limit 80    # same, plus 75–80% charge limit
 sudo sh install.sh --uninstall          # remove everything
@@ -49,7 +49,3 @@ sudo sh install.sh --uninstall          # remove everything
 Check that it took effect: `cat /sys/power/disk` should show `[shutdown]` during a hibernate, `systemctl list-timers battery-guard.timer` should list the timer, and any warnings are logged with `journalctl -t resume-health-check -t battery-guard`.
 
 Requires systemd and `notify-send` (libnotify) for the warnings. Tested on Kubuntu 26.04 / Plasma 6.6 Wayland / systemd 259. No warranty; read the scripts before running them.
-
----
-
-First published as a [gist](https://gist.github.com/taghouttarek/e13d840343614c2e285331490783a2a4).
